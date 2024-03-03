@@ -1,16 +1,16 @@
-import { When, Then } from "@cucumber/cucumber";
-import { Greeter } from '../../src';
-
-interface MyWorld {
-  whatIHeard: string;
-}
-
-When("the greeter says hello", function (this: MyWorld) {
-  this.whatIHeard = new Greeter().sayHello();
+import { Given, When, Then } from "@cucumber/cucumber";
+    
+Given("today is Sunday", function () {
+	// Write code here that turns the phrase above into concrete actions
+	return "pending";
+});
+         
+When("I ask whether it's Friday yet", function () {
+	// Write code here that turns the phrase above into concrete actions
+	return "pending";
 });
 
-Then("I should have heard {string}", function (this: MyWorld, expected: string) {
-  if (this.whatIHeard !== expected) {
-    throw new Error(`I heard ${this.whatIHeard}`);
-  }
+Then("I should be told {string}", function (string) {
+	// Write code here that turns the phrase above into concrete actions
+	return "pending";
 });
