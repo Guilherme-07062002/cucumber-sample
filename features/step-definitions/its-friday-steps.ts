@@ -5,15 +5,11 @@ import assert from "assert";
 const itIsFriday = (today: string) => {
 	return today === "Friday" ? "TGIF" : "Nope";
 };
-    
-Given("today is Sunday", function () {
-	this.today = "Sunday";
+         
+Given("today is {string}", function (day: string) {
+	this.today = day;
 });
 
-Given("today is Friday", function () {
-	this.today = "Friday";
-});
-         
 When("I ask whether it's Friday yet", function () {
 	this.actualAnswer = itIsFriday(this.today);
 });
@@ -21,3 +17,4 @@ When("I ask whether it's Friday yet", function () {
 Then("I should be told {string}", function (expectedAnswer: string) {
 	assert.strictEqual(this.actualAnswer, expectedAnswer);
 });
+
