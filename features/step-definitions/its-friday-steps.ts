@@ -1,10 +1,6 @@
 import { Given, When, Then } from "@cucumber/cucumber";
+import { itIsFriday } from "../../src";
 import assert from "assert";
-
-// TGIF - Thank God It's Friday
-const itIsFriday = (today: string) => {
-	return today === "Friday" ? "TGIF" : "Nope";
-};
          
 Given("today is {string}", function (day: string) {
 	this.today = day;
