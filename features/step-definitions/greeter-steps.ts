@@ -6,10 +6,10 @@ Given("I am a greeter", function () {
 	this.greeter = new Greeter();
 });
        
-When("I see the another greeter", function () {
-	this.anotherGreeter = new Greeter();
+When("I greet someone", function () {
+	this.greeting = this.greeter.sayHello();
 });
        
-Then("I should say {string}", function (string) {
-	assert.strictEqual(this.greeter.sayHello(), string);
+Then("I should say {string}", function (expectedGreeting: string) {
+	assert.strictEqual(this.greeting, expectedGreeting);
 });

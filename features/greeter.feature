@@ -1,7 +1,9 @@
 Feature: Greeter
-  When you see the greeter, then you should say "Hello"
+  As a user
+  I want to be able to greet someone
+  So that I can be polite
 
-  Scenario: Greet
+  Scenario: Greet with Hello
     Given I am a greeter
-    When I see the another greeter
+    When I greet someone
     Then I should say "Hello"
