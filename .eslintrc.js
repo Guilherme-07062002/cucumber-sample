@@ -36,6 +36,11 @@ module.exports = {
 			"error",
 			{ "max": 1 }
 		],
+		"no-trailing-spaces": "error",
+		"no-multi-spaces": "error",
+		"no-unused-vars": "off",
+		"@typescript-eslint/no-unused-vars": ["error"],
+		"no-undef": "off",
 	},
 	"ignorePatterns": [
 		"dist/",
