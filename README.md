@@ -15,7 +15,7 @@ Cucumber is a tool that supports BDD. It offers a way to write tests that anybod
 Clone the repository
 
 ```bash
-git clone https://github.com/Guilherme-07062002/rabbitmq-sample.git
+git clone https://github.com/Guilherme-07062002/cucumber-sample.git
 ```
 
 Install the dependencies
