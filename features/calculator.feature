@@ -22,3 +22,8 @@ Feature: Calculator
     Given I have entered "20" and "4" into the calculator
     When I press the divide button
     Then the result should be "5" on the screen
+
+  Scenario: Divide by zero
+    Given I have entered "20" and "0" into the calculator
+    When I press the divide button
+    Then show an error message "Cannot divide by zero" on the screen

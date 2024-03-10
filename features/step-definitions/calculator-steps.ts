@@ -22,10 +22,19 @@ When("I press the multiply button", function () {
 });
 
 When("I press the divide button", function () {
-	this.result = calculator.divide(this.a, this.b);
+	try{
+		this.result = calculator.divide(this.a, this.b);
+	} catch (e) {
+		this.error = e;
+	}
 });
 
 Then("the result should be {string} on the screen", function (expectedResult: string) {
 	assert.strictEqual(this.result, parseInt(expectedResult));
+});
+
+Then("show an error message {string} on the screen", function (errorMessage: string) {
+	assert.ok(this.error instanceof Error, "Expected an error to be thrown");
+	assert.strictEqual(this.error.message, errorMessage);
 });
 
