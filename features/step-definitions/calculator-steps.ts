@@ -4,9 +4,9 @@ import assert = require("assert");
 
 const calculator = new Calculator();
 
-Given("I have entered {string} and {string} into the calculator", function (a: string, b: string) {
-	this.a = parseInt(a);
-	this.b = parseInt(b);
+Given("I have entered {int} and {int} into the calculator", function (a: number, b: number) {
+	this.a = a;
+	this.b = b;
 });
 
 When("I press the add button", function () {
@@ -29,8 +29,8 @@ When("I press the divide button", function () {
 	}
 });
 
-Then("the result should be {string} on the screen", function (expectedResult: string) {
-	assert.strictEqual(this.result, parseInt(expectedResult));
+Then("the result should be {int} on the screen", function (expectedResult: number) {
+	assert.strictEqual(this.result, expectedResult);
 });
 
 Then("show an error message {string} on the screen", function (errorMessage: string) {
