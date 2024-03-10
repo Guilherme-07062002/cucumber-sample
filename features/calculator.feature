@@ -17,3 +17,8 @@ Feature: Calculator
     Given I have entered "5" and "3" into the calculator
     When I press the multiply button
     Then the result should be "15" on the screen
+
+  Scenario: Divide two numbers
+    Given I have entered "20" and "4" into the calculator
+    When I press the divide button
+    Then the result should be "5" on the screen
