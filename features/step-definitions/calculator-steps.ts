@@ -17,6 +17,10 @@ When("I press the subtract button", function ()  {
 	this.result = calculator.subtract(this.a, this.b);
 });
 
+When("I press the multiply button", function () {
+	this.result = calculator.multiply(this.a, this.b);
+});
+
 Then("the result should be {string} on the screen", function (expectedResult: string) {
 	assert.strictEqual(this.result, parseInt(expectedResult));
 });
