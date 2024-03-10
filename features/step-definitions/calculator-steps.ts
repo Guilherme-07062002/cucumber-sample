@@ -10,10 +10,14 @@ Given("I have entered {string} and {string} into the calculator", function (a: s
 });
 
 When("I press the add button", function () {
-	this.sumResult = calculator.add(this.a, this.b);
+	this.result = calculator.add(this.a, this.b);
 });
 
-Then("the result should be {string} on the screen", function (expectedSumResult: string) {
-	assert.strictEqual(this.sumResult, parseInt(expectedSumResult));
+When("I press the subtract button", function ()  {
+	this.result = calculator.subtract(this.a, this.b);
+});
+
+Then("the result should be {string} on the screen", function (expectedResult: string) {
+	assert.strictEqual(this.result, parseInt(expectedResult));
 });
 
